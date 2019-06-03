@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">@android:color/holo_orange_light</color>
+    <color name="grey">#7E7E7E</color>
+    <color name="tabindicator">#0096E1</color>
+    <color name="bgbutton">#282C34</color>
+    <color name="white_f5">#f5f5f5</color>
+</resources>

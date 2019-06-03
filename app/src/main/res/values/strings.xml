@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyMovie</string>
+    <string name="movieimage">movieImage</string>
+    <string name="error_no_network">No internet connection.</string>
+    <string name="buy_ticket">BUY TICKET</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in cul</string>
+    <string name="release_date">Release date</string>
+    <string name="movie">Movie</string>
+
+</resources>

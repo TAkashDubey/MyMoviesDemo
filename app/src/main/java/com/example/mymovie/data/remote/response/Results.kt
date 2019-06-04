@@ -7,5 +7,5 @@ data class Results(
         @SerializedName("showing")
         var showing: MutableList<Showing?>? = mutableListOf(),
         @SerializedName("upcoming")
-        var upcoming: MutableList<Upcoming?>? = mutableListOf()
+        var upcoming: MutableList<Showing?>? = mutableListOf()
 )

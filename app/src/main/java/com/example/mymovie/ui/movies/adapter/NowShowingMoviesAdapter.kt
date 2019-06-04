@@ -1,19 +1,21 @@
-package com.example.mymovie.ui.main.adapter
+package com.example.mymovie.ui.movies.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mymovie.R
-import com.example.mymovie.data.remote.response.Showing
 import com.example.mymovie.databinding.ItemMoviesNowShowingBinding
+import com.example.mymovie.domain.entity.MovieEntity
 
-class NowShowingMoviesAdapter(var items: MutableList<Showing?>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class NowShowingMoviesAdapter(var items: MutableList<MovieEntity.MovieDataEntity>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val VIEW_TYPE_ITEM = 0
-    private val VIEW_TYPE_LOADING = 1
+    companion object {
+        const val VIEW_TYPE_ITEM = 0
+        const val VIEW_TYPE_LOADING = 1
+    }
+
     private var isLoading = false
 
     override fun getItemCount() = if (isLoading) items?.size?.plus(1) ?: 0 else items?.size ?: 0
@@ -65,11 +67,5 @@ class NowShowingMoviesAdapter(var items: MutableList<Showing?>?) : RecyclerView.
         }
     }
 
-    inner class LoadingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        internal var progressBar: ProgressBar
-
-        init {
-            progressBar = itemView.findViewById(R.id.progressBar)
-        }
-    }
+    inner class LoadingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

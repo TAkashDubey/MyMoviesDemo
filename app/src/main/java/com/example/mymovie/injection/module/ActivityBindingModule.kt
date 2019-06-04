@@ -1,7 +1,7 @@
 package com.example.mymovie.injection.module
 
 import com.example.mymovie.injection.scope.ActivityScoped
-import com.example.mymovie.ui.main.MoviesActivity
+import com.example.mymovie.ui.movies.MoviesActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

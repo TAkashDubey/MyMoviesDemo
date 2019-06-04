@@ -1,7 +1,7 @@
 package com.example.mymovie.injection.module
 
-import com.example.mymovie.ui.main.ComingSoonFragment
-import com.example.mymovie.ui.main.NowShowingFragment
+import com.example.mymovie.ui.movies.ComingSoonFragment
+import com.example.mymovie.ui.movies.NowShowingFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

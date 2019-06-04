@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.example.mymovie.data.remote.response.Upcoming" />
+            type="com.example.mymovie.domain.entity.MovieEntity.MovieDataEntity" />
 
     </data>
 
@@ -40,21 +40,21 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/ratingBar"
+            app:layout_constraintBottom_toTopOf="@id/rbMovie"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivLogo"
             app:layout_constraintTop_toTopOf="@id/ivLogo"
             tools:text="Black Panther : Marvel Studio" />
 
         <androidx.appcompat.widget.AppCompatRatingBar
-            android:id="@+id/ratingBar"
+            android:id="@+id/rbMovie"
             style="@style/Widget.AppCompat.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_4sdp"
             android:isIndicator="true"
             android:numStars="5"
-            android:rating="@{model.rateAtBar}"
+            android:rating="@{model.rateForRating}"
             android:stepSize="0.1"
             app:layout_constraintBottom_toTopOf="@id/tvReleaseDate"
             app:layout_constraintStart_toStartOf="@id/tvName"
@@ -66,11 +66,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_4sdp"
-            android:text="@{model.rateS}"
+            android:text="@{model.rateString}"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="@dimen/_10ssp"
-            app:layout_constraintStart_toEndOf="@id/ratingBar"
-            app:layout_constraintTop_toTopOf="@id/ratingBar"
+            app:layout_constraintStart_toEndOf="@id/rbMovie"
+            app:layout_constraintTop_toTopOf="@id/rbMovie"
             tools:text="8.75" />
 
         <com.google.android.material.button.MaterialButton
@@ -107,15 +107,15 @@
             android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/_10ssp"
             app:layout_constraintBottom_toTopOf="@id/tvDescription"
-            app:layout_constraintStart_toStartOf="@id/ratingBar"
-            app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+            app:layout_constraintStart_toStartOf="@id/rbMovie"
+            app:layout_constraintTop_toBottomOf="@id/rbMovie" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvReleaseDateValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
-            android:text="@{model.dateString}"
+            android:text="@{model.releaseDate}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="@id/tvReleaseDate"

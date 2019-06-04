@@ -20,7 +20,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.mymovie.injection.ViewModelKey
 import com.example.mymovie.ui.base.ViewModelFactory
-import com.example.mymovie.ui.main.MoviesViewModel
+import com.example.mymovie.ui.movies.MoviesViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

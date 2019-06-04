@@ -14,9 +14,7 @@ import androidx.lifecycle.ViewModelProviders
  * val myViewModel = viewModelProvider(myViewModelFactory)
  * ```
  */
-inline fun <reified VM : ViewModel> FragmentActivity.viewModelProvider(
-        provider: ViewModelProvider.Factory
-) =
+inline fun <reified VM : ViewModel> FragmentActivity.viewModelProvider(provider: ViewModelProvider.Factory) =
         ViewModelProviders.of(this, provider).get(VM::class.java)
 
 /**
@@ -25,26 +23,11 @@ inline fun <reified VM : ViewModel> FragmentActivity.viewModelProvider(
  * val myViewModel = viewModelProvider(myViewModelFactory)
  * ```
  */
-inline fun <reified VM : ViewModel> Fragment.viewModelProvider(
-        provider: ViewModelProvider.Factory
-) =
+inline fun <reified VM : ViewModel> Fragment.viewModelProvider(provider: ViewModelProvider.Factory) =
         ViewModelProviders.of(this, provider).get(VM::class.java)
 
 /**
  * Like [Fragment.viewModelProvider] for Fragments that want a [ViewModel] scoped to the Activity.
  */
-inline fun <reified VM : ViewModel> Fragment.activityViewModelProvider(
-        provider: ViewModelProvider.Factory
-) =
+inline fun <reified VM : ViewModel> Fragment.activityViewModelProvider(provider: ViewModelProvider.Factory) =
         ViewModelProviders.of(requireActivity(), provider).get(VM::class.java)
-
-/**
- * Like [Fragment.viewModelProvider] for Fragments that want a [ViewModel] scoped to the parent
- * Fragment.
- */
-inline fun <reified VM : ViewModel> Fragment.parentViewModelProvider(
-        provider: ViewModelProvider.Factory
-) =
-        ViewModelProviders.of(parentFragment!!, provider).get(VM::class.java)
-
-// endregion

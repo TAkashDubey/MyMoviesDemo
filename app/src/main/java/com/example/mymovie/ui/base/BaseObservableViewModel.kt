@@ -21,9 +21,6 @@ open class BaseObservableViewModel(app: Application) : AndroidViewModel(app), Ob
     protected val _errorLiveData = MutableLiveData<String>()
     val errorLiveData: LiveData<String?> get() = _errorLiveData
 
-    protected val _maintanaceErrorLiveData = MutableLiveData<Boolean>()
-    val maintanaceErrorLiveData: LiveData<Boolean> get() = _maintanaceErrorLiveData
-
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.dispose()
@@ -32,15 +29,11 @@ open class BaseObservableViewModel(app: Application) : AndroidViewModel(app), Ob
 
     private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
 
-    override fun addOnPropertyChangedCallback(
-            callback: Observable.OnPropertyChangedCallback
-    ) {
+    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback) {
         callbacks.add(callback)
     }
 
-    override fun removeOnPropertyChangedCallback(
-            callback: Observable.OnPropertyChangedCallback
-    ) {
+    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback) {
         callbacks.remove(callback)
     }
 

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Results(
         @SerializedName("showing")
-        var showing: MutableList<Showing>? = mutableListOf(),
+        var showing: MutableList<Showing?>? = mutableListOf(),
         @SerializedName("upcoming")
-        var upcoming: MutableList<Upcoming>? = mutableListOf()
+        var upcoming: MutableList<Upcoming?>? = mutableListOf()
 )

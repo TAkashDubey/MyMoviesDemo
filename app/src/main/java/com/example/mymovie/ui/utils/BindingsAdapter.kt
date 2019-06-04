@@ -13,7 +13,7 @@ object BindingsAdapter {
     fun loadImage(view: ImageView, url: String?) {
         GlideApp.with(view)
                 .load(url)
-                .transform(CenterCrop(), RoundedCorners(24))
+                .transform(CenterCrop(), RoundedCorners(40))
                 .into(view)
     }
 }

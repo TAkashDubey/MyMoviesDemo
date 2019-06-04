@@ -28,9 +28,4 @@ abstract class BaseFragment : DaggerFragment() {
         viewModelSetup()
         viewSetup()
     }
-
-    fun dismiss() {
-        activity?.supportFragmentManager?.popBackStackImmediate()
-    }
-
 }

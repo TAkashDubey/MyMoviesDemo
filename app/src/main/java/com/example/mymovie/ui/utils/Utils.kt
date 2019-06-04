@@ -8,11 +8,11 @@ class Utils {
     companion object{
         fun getDate(milliSeconds: Long, dateFormat: String): String {
             // Create a DateFormatter object for displaying date in specified format.
-            val formatter = SimpleDateFormat(dateFormat)
+            val formatter = SimpleDateFormat(dateFormat, Locale.getDefault())
             // Create a calendar object that will convert the date and time value in milliseconds to date.
             val calendar = Calendar.getInstance()
-            calendar.setTimeInMillis(milliSeconds)
-            return formatter.format(calendar.getTime())
+            calendar.timeInMillis = milliSeconds
+            return formatter.format(calendar.time)
         }
     }
 }
